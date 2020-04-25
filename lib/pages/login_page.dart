@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
           color: Colors.indigo,
           textColor: Colors.white,
           child: Text('Iniciar Sesion'),
-          onPressed: () => Navigator.pushNamed(context, 'customer'),
+          onPressed: () => Navigator.pushReplacementNamed(context, 'owner'),
         ),
       )
     );

@@ -7,15 +7,8 @@ class CustomerPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Driveloop'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.exit_to_app), 
-            onPressed: () => Navigator.pop(context),
-            tooltip: 'Cerrar Sesion',
-          ),
-        ],
       ),
-      drawer: AppDrawer(),
+      drawer: AppDrawer(tipoUsuario: 'customer'),
       body: Center(
         child: Text('Página principal de usuarios clientes'),
       ),
