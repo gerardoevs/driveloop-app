@@ -42,8 +42,6 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 20.0),
                 _crearInputPassword(),
                 SizedBox(height: 20.0),
-                _crearInputPassword(),
-                SizedBox(height: 20.0),
                 RaisedButton(
                   textColor: Colors.white,
                   shape: RoundedRectangleBorder(
