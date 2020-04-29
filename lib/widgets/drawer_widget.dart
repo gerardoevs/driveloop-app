@@ -16,7 +16,7 @@ class AppDrawer extends StatelessWidget {
     final List<Widget> list = [];
 
     list.add(DrawerHeader(
-      child: FlutterLogo(size: 200),
+      child: Image.network('https://www.brandbucket.com/sites/default/files/logo_uploads/68678/large_driveloop1.png'),
       decoration: BoxDecoration(color: Colors.indigo),
     ));
 
@@ -26,21 +26,21 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(data['icono']),
             title: Text(data['nombre']),
+            trailing: Icon(Icons.arrow_right),
             onTap: () => Navigator.pushNamed(context, data['ruta']),
           ),
-          Divider()
         ],
       ));
     });
 
     list.add(Column(
         children: <Widget>[
+          Divider(thickness: 1),
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Cerrar Sesión'),
             onTap: () => Navigator.pushReplacementNamed(context, 'login'),
           ),
-          Divider()
         ],
       ));
 

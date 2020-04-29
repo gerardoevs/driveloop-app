@@ -8,11 +8,11 @@ class ReceivedPage extends StatefulWidget {
 
 class _ReceivedPage extends State<ReceivedPage> {
   final List<Map<String, String>> _notificaciones = [
-      {'nombre': 'Josias', 'marca': 'Toyota', 'modelo': 'Corolla', 'tiempo': '5 dias'}, 
-      {'nombre': 'Carlos', 'marca': 'Honda', 'modelo': 'CRV', 'tiempo': '3 dias'}, 
-      {'nombre': 'Mario', 'marca': 'Mitsubishi', 'modelo': 'Lancer', 'tiempo': '8 dias'}, 
-      {'nombre': 'Karina', 'marca': 'Nissan', 'modelo': 'Sentra', 'tiempo': '4 dias'}, 
-      {'nombre': 'Alberto', 'marca': 'Kia', 'modelo': 'Forte', 'tiempo': '7 dias'}
+      {'nombre': 'Josias Hernandez', 'marca': 'Toyota', 'modelo': 'Corolla', 'tiempo': '5 dias'}, 
+      {'nombre': 'Carlos Hernandez', 'marca': 'Honda', 'modelo': 'CRV', 'tiempo': '3 dias'}, 
+      {'nombre': 'Mario Hernandez', 'marca': 'Mitsubishi', 'modelo': 'Lancer', 'tiempo': '8 dias'}, 
+      {'nombre': 'Karina Hernandez', 'marca': 'Nissan', 'modelo': 'Sentra', 'tiempo': '4 dias'}, 
+      {'nombre': 'Alberto Hernandez', 'marca': 'Kia', 'modelo': 'Forte', 'tiempo': '7 dias'}
     ];
 
   @override
@@ -34,7 +34,7 @@ class _ReceivedPage extends State<ReceivedPage> {
     return Card(
       child: ListTile(
         isThreeLine: true,
-        leading: Image.network('https://picsum.photos/seed/asd/300'),
+        leading: Image.network('https://upload.wikimedia.org/wikipedia/commons/b/b7/2017_Kia_Sorento_KX-4_4X4_Automatic_2%2C2_Front.jpg', width: 90,),
         title: Text('${data['nombre']}'),
         subtitle: Text('${data['marca']} ${data['modelo']}\npor: ${data['tiempo']}', softWrap: false, overflow: TextOverflow.fade,),
         onTap: () {
@@ -44,14 +44,14 @@ class _ReceivedPage extends State<ReceivedPage> {
           mainAxisSize: MainAxisSize.min,
           buttonPadding: EdgeInsets.zero,
           children: <Widget>[
-            IconButton(icon: Icon(Icons.thumb_down), color: Colors.pink, onPressed: (){
+            IconButton(icon: Icon(Icons.not_interested), tooltip: 'Rechazar', color: Colors.pink, onPressed: (){
               setState(() {
                 if(_notificaciones.isNotEmpty){
                   _notificaciones.removeAt(index);
                 }               
               });
             }, iconSize: 22),
-            IconButton(icon: Icon(Icons.thumb_up), color: Colors.indigo, onPressed: (){
+            IconButton(icon: Icon(Icons.thumb_up), tooltip: 'Aceptar', color: Colors.indigo, onPressed: (){
               setState(() {
                 if(_notificaciones.isNotEmpty){
                   _notificaciones.removeAt(index);
@@ -71,7 +71,7 @@ class _ReceivedPage extends State<ReceivedPage> {
         child: Text('Detalles de la solicitud'),
       ),
       children: <Widget>[
-        FadeInImage.memoryNetwork(placeholder: kTransparentImage, image: 'https://picsum.photos/seed/asd/350/200', height: 200),
+        FadeInImage.memoryNetwork(placeholder: kTransparentImage, image: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/2017_Kia_Sorento_KX-4_4X4_Automatic_2%2C2_Front.jpg', height: 200),
         Text.rich(TextSpan(
           children: [
             TextSpan(text: 'El usuario '),
