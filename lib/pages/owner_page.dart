@@ -28,7 +28,7 @@ class OwnerPage extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 AspectRatio(
-                  aspectRatio: 4 / 3,
+                  aspectRatio: 4 / 3.5,
                   child: Image(image: AssetImage('assets/img/cars/car1.jpg'), fit: BoxFit.cover),
                 ),
                 SizedBox(
@@ -53,7 +53,7 @@ class OwnerPage extends StatelessWidget {
                           Icon(Icons.star),
                           Icon(Icons.star),
                           FlatButton(
-                            onPressed: (){},
+                            onPressed: () => Navigator.pushNamed(context, 'carinfo'),
                             child: Text("Reservar"),
                           )
                         ],
@@ -73,7 +73,7 @@ class OwnerPage extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 AspectRatio(
-                  aspectRatio: 4 / 3,
+                  aspectRatio: 4 / 3.5,
                   child: Image(image: AssetImage('assets/img/cars/car2.jpg'), fit: BoxFit.cover),
                 ),
                 SizedBox(
@@ -98,7 +98,7 @@ class OwnerPage extends StatelessWidget {
                           Icon(Icons.star),
                           Icon(Icons.star),
                           FlatButton(
-                            onPressed: (){},
+                            onPressed: () => Navigator.pushNamed(context, 'carinfo'),
                             child: Text("Reservar"),
                           )
                         ],
@@ -118,7 +118,7 @@ class OwnerPage extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 AspectRatio(
-                  aspectRatio: 4 / 3,
+                  aspectRatio: 4 / 3.5,
                   child: Image(image: AssetImage('assets/img/cars/car3.jpg'), fit: BoxFit.cover),
                 ),
                 SizedBox(
@@ -143,7 +143,7 @@ class OwnerPage extends StatelessWidget {
                           Icon(Icons.star),
                           Icon(Icons.star),
                           FlatButton(
-                            onPressed: (){},
+                            onPressed: () => Navigator.pushNamed(context, 'carinfo'),
                             child: Text("Reservar"),
                           )
                         ],
@@ -163,7 +163,7 @@ class OwnerPage extends StatelessWidget {
             child: Row(
               children: <Widget>[
                 AspectRatio(
-                  aspectRatio: 4 / 3,
+                  aspectRatio: 4 / 3.5,
                   child: Image(image: AssetImage('assets/img/cars/car4.jpg'), fit: BoxFit.cover),
                 ),
                 SizedBox(
@@ -188,7 +188,7 @@ class OwnerPage extends StatelessWidget {
                           Icon(Icons.star),
                           Icon(Icons.star_half),
                           FlatButton(
-                            onPressed: (){},
+                            onPressed: () => Navigator.pushNamed(context, 'carinfo'),
                             child: Text("Reservar"),
                           )
                         ],
