@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 15),
+                  padding: EdgeInsets.symmetric(horizontal: 60, vertical: 15),
                   child: Text("Iniciar Sesión"),
                   color: Colors.indigo,
                   onPressed: () => Navigator.pushReplacementNamed(context, 'owner'),
