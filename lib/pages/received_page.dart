@@ -34,9 +34,13 @@ class _ReceivedPage extends State<ReceivedPage> {
     return Card(
       child: ListTile(
         isThreeLine: true,
-        leading: Image.network('https://upload.wikimedia.org/wikipedia/commons/b/b7/2017_Kia_Sorento_KX-4_4X4_Automatic_2%2C2_Front.jpg', width: 90,),
+        leading: Image.network(
+          'https://upload.wikimedia.org/wikipedia/commons/b/b7/2017_Kia_Sorento_KX-4_4X4_Automatic_2%2C2_Front.jpg', 
+
+          fit: BoxFit.contain,
+        ),
         title: Text('${data['nombre']}'),
-        subtitle: Text('${data['marca']} ${data['modelo']}\npor: ${data['tiempo']}', softWrap: false, overflow: TextOverflow.fade,),
+        subtitle: Text('${data['marca']} ${data['modelo']} por: ${data['tiempo']}', softWrap: false, overflow: TextOverflow.ellipsis),
         onTap: () {
           showDialog(context: context, child: _notificationDialog(data));
         },

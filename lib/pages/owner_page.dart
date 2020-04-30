@@ -54,8 +54,11 @@ class OwnerPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("Toyota Corola", 
-                        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),maxLines: 2, overflow: TextOverflow.clip,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, 'carinfo'),
+                        child: Text("Toyota Corola", 
+                          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),maxLines: 2, overflow: TextOverflow.clip,
+                        ),
                       ),
                       SizedBox(height: 5.0,),
                       Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -99,8 +102,11 @@ class OwnerPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("Hyundai Elantra", 
-                        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),maxLines: 2, overflow: TextOverflow.clip,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, 'carinfo'),
+                        child: Text("Hyundai Elantra", 
+                          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),maxLines: 2, overflow: TextOverflow.clip,
+                        ),
                       ),
                       SizedBox(height: 5.0,),
                       Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -144,8 +150,11 @@ class OwnerPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("Hyundai Elantra 2017", 
-                        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),maxLines: 2, overflow: TextOverflow.clip,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, 'carinfo'),
+                        child: Text("Hyundai Elantra 2017", 
+                          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),maxLines: 2, overflow: TextOverflow.clip,
+                        ),
                       ),
                       SizedBox(height: 5.0,),
                       Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -189,8 +198,11 @@ class OwnerPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("Nissan Rogue", 
-                        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),maxLines: 2, overflow: TextOverflow.clip,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, 'carinfo'),
+                        child: Text("Nissan Rogue", 
+                          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),maxLines: 2, overflow: TextOverflow.clip,
+                        ),
                       ),
                       SizedBox(height: 5.0,),
                       Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit",
