@@ -8,50 +8,64 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(padding: EdgeInsets.zero, children: _crearItems(context)),
-    );
-  }
-
-  List<Widget> _crearItems(BuildContext context) {
-    final List<Widget> list = [];
-
-    list.add(DrawerHeader(
-      child: Image.network('https://www.brandbucket.com/sites/default/files/logo_uploads/68678/large_driveloop1.png'),
-      decoration: BoxDecoration(color: Colors.indigo),
-    ));
-
-    drawerItems[tipoUsuario].forEach((data) {
-      list.add(Column(
-        children: <Widget>[
-          ListTile(
-            leading: Icon(data['icono']),
-            title: Text(data['nombre']),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () => Navigator.pushNamed(context, data['ruta']),
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          DrawerHeader(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expanded(
+                  child: CircleAvatar(
+                    child: Text('USER'),
+                    maxRadius: 40,
+                  )
+                ),
+                Text('Bienvenido a Driveloop',
+                  style: TextStyle(fontSize: 18, color: Colors.white)
+                )
+              ],
+            ),
+            decoration: BoxDecoration(color: Colors.indigo),
           ),
-        ],
-      ));
-    });
 
-    list.add(Column(
-        children: <Widget>[
+          _crearItems(context),
+          
           Divider(thickness: 1),
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Cerrar Sesión'),
             onTap: () => Navigator.pushReplacementNamed(context, 'login'),
-          ),
+          )
         ],
-      ));
+      ),
+    );
+  }
 
-    return list;
+  Widget _crearItems(BuildContext context) {
+    return Column(
+      children: drawerItems[tipoUsuario].map((data) => 
+        ListTile(
+          leading: Icon(data['icono']),
+          title: Text(data['nombre']),
+          trailing: Icon(Icons.arrow_right),
+          onTap: () => Navigator.pushNamed(context, data['ruta'])
+        )
+      ).toList()
+    );
   }
 }
 
 const Map<String, List> drawerItems = {
   'owner': [
     {'nombre': 'Mi Garage', 'icono': Icons.directions_car, 'ruta': 'garage'},
-    {'nombre': 'Solicitudes Recibidas', 'icono': Icons.inbox, 'ruta': 'received'},
+    {
+      'nombre': 'Solicitudes Recibidas',
+      'icono': Icons.inbox,
+      'ruta': 'received'
+    },
     {
       'nombre': 'Clientes',
       'icono': Icons.supervised_user_circle,

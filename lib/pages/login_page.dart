@@ -50,7 +50,7 @@ class LoginPage extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 60, vertical: 15),
                   child: Text("Iniciar Sesión"),
                   color: Colors.indigo,
-                  onPressed: () => Navigator.pushReplacementNamed(context, 'owner'),
+                  onPressed: () => Navigator.pushReplacementNamed(context, 'main'),
                 )
               ],
             ),

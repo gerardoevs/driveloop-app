@@ -33,11 +33,9 @@ class _ReceivedPage extends State<ReceivedPage> {
   Widget _notificationCard(Map<String, String> data, int index) {
     return Card(
       child: ListTile(
-        isThreeLine: true,
         leading: Image.network(
-          'https://upload.wikimedia.org/wikipedia/commons/b/b7/2017_Kia_Sorento_KX-4_4X4_Automatic_2%2C2_Front.jpg', 
-
-          fit: BoxFit.contain,
+          'https://images.locanto.com.sv/4917901862/Toyota-Corolla-2018-de-Agencia-Venta_1.jpg',
+          width: 70
         ),
         title: Text('${data['nombre']}'),
         subtitle: Text('${data['marca']} ${data['modelo']} por: ${data['tiempo']}', softWrap: false, overflow: TextOverflow.ellipsis),
@@ -75,7 +73,10 @@ class _ReceivedPage extends State<ReceivedPage> {
         child: Text('Detalles de la solicitud'),
       ),
       children: <Widget>[
-        FadeInImage.memoryNetwork(placeholder: kTransparentImage, image: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/2017_Kia_Sorento_KX-4_4X4_Automatic_2%2C2_Front.jpg', height: 200),
+        FadeInImage.memoryNetwork(
+          placeholder: kTransparentImage, 
+          image: 'https://images.locanto.com.sv/4917901862/Toyota-Corolla-2018-de-Agencia-Venta_1.jpg'
+        ),
         Text.rich(TextSpan(
           children: [
             TextSpan(text: 'El usuario '),
